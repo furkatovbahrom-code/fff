@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>B-ECO Fuel Tabs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">B-ECO</div>
+  <div class="lang">
+    <button onclick="setLang('kz')">KZ</button>
+    <button onclick="setLang('uz')">UZ</button>
+    <button onclick="setLang('ru')">RU</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1 id="title"></h1>
+    <p id="desc"></p>
+
+    <div class="actions">
+      <a id="callBtn" class="btn call" href="tel:+77752709238">📞 Qo‘ng‘iroq</a>
+      <a id="waBtn" class="btn wa" href="https://wa.me/77752709238" target="_blank">💬 WhatsApp</a>
+    </div>
+  </div>
+
+  <img src="assets/fuel-tabs.jpg" alt="Fuel Tabs">
+</section>
+
+<section class="info">
+  <button onclick="showBox(1)" id="b1"></button>
+  <button onclick="showBox(2)" id="b2"></button>
+  <button onclick="showBox(3)" id="b3"></button>
+</section>
+
+<section class="content">
+  <div id="box1" class="box"></div>
+  <div id="box2" class="box"></div>
+  <div id="box3" class="box"></div>
+</section>
+
+<!-- FAQ QISMI -->
+<section class="faq">
+  <h2>Ko‘p beriladigan savollar</h2>
+
+  <div class="faq-item">
+    <button class="faq-q">❓ Nega B-ECO foydali?</button>
+    <div class="faq-a">
+      Yoqilg‘i sarfini 10–20% gacha kamaytiradi, dvigatelni himoya qiladi
+      va quvvatni oshiradi.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">⚙️ Qanday ishlaydi?</button>
+    <div class="faq-a">
+      Yoqilg‘ining to‘liq yonishiga yordam beradi, zararli chiqindilarni kamaytiradi.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">⛽️ Qanday qo‘llaniladi?</button>
+    <div class="faq-a">
+      1 dona tabletka 60–70 litr yoqilg‘i uchun. Bak ichiga solinadi.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">🚗 Qaysi mashinalarga mos?</button>
+    <div class="faq-a">
+      Benzin va dizel dvigatelli barcha avtomobillar uchun mos.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">🛡️ Dvigatelga zarar qilmaydimi?</button>
+    <div class="faq-a">
+      Yo‘q. Mahsulot xavfsiz va dvigatel resursini oshiradi.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-q">📦 Natija qachon bilinadi?</button>
+    <div class="faq-a">
+      Birinchi bakdan keyin yoqilg‘i tejalishi seziladi.
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 B-ECO Fuel Tabs
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+document.querySelectorAll(".faq-q").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const ans = btn.nextElementSibling;
+    ans.style.display = ans.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+</body>
+</html>
